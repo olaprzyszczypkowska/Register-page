@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: #161616;
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
+  color: white;
+}
+
+.register {
+  position: relative;
+  width: 60vw;
+  height: 70vh;
+  margin-top: 4rem;
+  display: flex;
+  justify-content: space-between;
+  background-image: url(/img/background.jpeg);
+  background-position: left;
+  background-size: cover;
+  box-shadow: 0 0 15px rgb(0, 0, 0);
+  &__shadow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.52);
+  }
+}
+.info {
+  align-self: flex-end;
+  padding: 3rem;
+  z-index: 100;
+  &__title {
+    font-size: 40px;
+    margin-bottom: 0.5rem;
+    font-weight: 300;
+  }
+  &__text {
+    line-height: 24px;
+  }
+}
+
+.signUp {
+  position: relative;
+  width: 50%;
+  &__title {
+    margin-top: 8rem;
+    margin-bottom: 0.5rem;
+    font-weight: 300;
+    font-size: 32px;
+    align-self: flex-start;
+    margin-left: 1rem;
+  }
+  &__form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    position: relative;
+    margin: 0 2rem; 
+    
+  }
+  &__shadow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+    backdrop-filter: blur(8px);
+  }
+
+  &__btn {
+    border: none;
+    color: white;
+    background-color: rgb(214, 121, 45);
+    padding: 1rem 2rem;
+    margin: 2rem 0rem 2rem 0rem;
+    cursor: pointer;
+  }
+
+  &__text {
+    position: relative;
+  }
+
+  &__text::after,
+  &__text::before {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 1px;
+    background-color: rgb(255, 255, 255);
+    top: 50%;
+  }
+  &__text::before {
+    left: -140px;
+  }
+  &__text::after {
+    right: -140px;
+  }
+
+  &__icon {
+    width: 30px;
+    margin: 1rem;
+    cursor: pointer;
+  }
+}
+
+.form {
+  position: relative;
+  padding: 1rem;
+  width: 450px;
+
+  .btn {
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.2rem;
+  }
+
+  &__input {
+    width: 100%;
+    height: 20px;
+    font-size: 14px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    padding: 0.3rem;
+    transition: all 0.2s ease-in;
+    outline: none;
+  }
+
+  &__text {
+    position: absolute;
+    bottom: 20px;
+    pointer-events: none;
+    color: rgb(175, 175, 175);
+    transition: all 0.2s ease-in;
+  }
+}
+
+.textUp {
+  transform: translateY(-25px);
+  font-size: 12px;
+  color: rgb(214, 121, 45);
+}
+
+.inputColor {
+  border-bottom: 2px solid rgb(214, 121, 45);
+}

@@ -1,14 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@300;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
 
+<body>
+    <div class="register">
+        <div class="register__shadow"></div>
+        <div class="info">
+            <h2 class="info__title">Don't have an account?</h2>
+            <p class="info__text">Register to access all the features of our service. Manage your business in one place for free.</p>
     
+        </div>
+        <div class="signUp">
+            <div class="signUp__shadow"></div>
+            <div class="signUp__form">
+                <h1 class="signUp__title">Sign up</h1>
+
+                <div class="form">
+                    <input class="form__input input__name" type="text" name="name" autocomplete="off" required>
+                    <label class="form__text name__text" for="">Name</label>
+                </div>
+                <div class="form">
+                    <input class="form__input input__email" type="email" name="name" autocomplete="off" required>
+                    <label class="form__text email__text" for="">E-mail</label>
+                </div>
+                <div class="form">
+                    <input class="form__input input__password" type="password" name="name" autocomplete="off" required>
+                    <label class="form__text password__text" for="">Password</label>
+                    <button class="btn">show</button>
+                </div>
+                
+                <button class="signUp__btn">Create an account</button>
+                <p class="signUp__text"> Or sign with</p>
+                <div class="signUp__icons">
+                    <img class="signUp__icon" src="/img/facebook.svg" alt="facebook logo">
+                    <img class="signUp__icon" src="/img/google.svg" alt="google logo">
+                    <img class="signUp__icon" src="/img/apple.svg" alt="apple logo">
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <script src="/main.js"></script>
 </body>
+
 </html>
