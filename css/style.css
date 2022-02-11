@@ -156,8 +156,7 @@ body {
   font-size: 14px;
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid white;
-  color: white;
+  color: #d6792d;
   padding: 0.3rem;
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
@@ -173,14 +172,43 @@ body {
   transition: all 0.2s ease-in;
 }
 
-.textUp {
+.form__underline {
+  position: absolute;
+  height: 1px;
+  width: 95%;
+  background-color: white;
+}
+
+.form__underline::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #d6792d;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.form__input:focus ~ .form__text,
+.form__input:valid ~ .form__text {
   -webkit-transform: translateY(-25px);
           transform: translateY(-25px);
   font-size: 12px;
   color: #d6792d;
 }
 
-.inputColor {
-  border-bottom: 2px solid #d6792d;
+.form__input:focus ~ .form__underline::after,
+.form__input:valid ~ .form__underline::after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: #d6792d;
 }
 /*# sourceMappingURL=style.css.map */
