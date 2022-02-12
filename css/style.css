@@ -63,8 +63,8 @@ body {
 }
 
 .signUp__title {
-  margin-top: 8rem;
-  margin-bottom: 0.5rem;
+  margin-top: 7rem;
+  margin-bottom: .5rem;
   font-weight: 300;
   font-size: 32px;
   -ms-flex-item-align: start;
@@ -128,8 +128,8 @@ body {
 }
 
 .signUp__icon {
-  width: 30px;
-  margin: 1rem;
+  width: 20px;
+  margin: .7rem;
   cursor: pointer;
 }
 
@@ -156,7 +156,7 @@ body {
   font-size: 14px;
   background-color: transparent;
   border: none;
-  color: #d6792d;
+  color: white;
   padding: 0.3rem;
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
@@ -189,6 +189,20 @@ body {
           transform: scale(0);
 }
 
+ul {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-left: 3rem;
+}
+
+li {
+  color: #6e6e6e;
+}
+
+.accept {
+  color: #03b403;
+}
+
 .form__input:focus ~ .form__text,
 .form__input:valid ~ .form__text {
   -webkit-transform: translateY(-25px);
@@ -209,6 +223,6 @@ input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
   -webkit-transition: background-color 5000s ease-in-out 0s;
   transition: background-color 5000s ease-in-out 0s;
-  -webkit-text-fill-color: #d6792d;
+  -webkit-text-fill-color: white;
 }
 /*# sourceMappingURL=style.css.map */
