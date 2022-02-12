@@ -17,8 +17,8 @@ body {
 
 .register {
   position: relative;
-  width: 60vw;
-  height: 70vh;
+  width: 70vw;
+  height: 80vh;
   margin-top: 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -45,6 +45,7 @@ body {
       align-self: flex-end;
   padding: 3rem;
   z-index: 100;
+  width: 60%;
 }
 
 .info__title {
@@ -63,13 +64,12 @@ body {
 }
 
 .signUp__title {
-  margin-top: 7rem;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   font-weight: 300;
-  font-size: 32px;
+  font-size: 36px;
   -ms-flex-item-align: start;
       align-self: flex-start;
-  margin-left: 1rem;
+  margin-left: 16px;
 }
 
 .signUp__form {
@@ -83,8 +83,12 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: relative;
-  margin: 0 2rem;
+  padding: 0 2rem;
+  height: 100%;
 }
 
 .signUp__shadow {
@@ -97,46 +101,98 @@ body {
           backdrop-filter: blur(8px);
 }
 
-.signUp__btn {
-  border: none;
-  color: white;
-  background-color: #d6792d;
-  padding: 1rem 2rem;
-  margin: 2rem 0rem 2rem 0rem;
-  cursor: pointer;
-}
-
 .signUp__text {
   position: relative;
+  margin-top: 2rem;
 }
 
 .signUp__text::after, .signUp__text::before {
   content: "";
   position: absolute;
-  width: 120px;
+  width: 100%;
   height: 1px;
   background-color: white;
   top: 50%;
 }
 
 .signUp__text::before {
-  left: -140px;
+  left: -120%;
 }
 
 .signUp__text::after {
-  right: -140px;
+  right: -120%;
 }
 
 .signUp__icon {
   width: 20px;
-  margin: .7rem;
+  margin: 0.7rem;
   cursor: pointer;
+}
+
+.button {
+  position: relative;
+  border: none;
+  width: 70%;
+  color: white;
+  background-color: #d6792d;
+  padding: 1rem 2rem;
+  margin: 2rem 0rem 0.5rem 0rem;
+  cursor: pointer;
+}
+
+.button__text {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.button__loading .button__text {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.button__loading::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border: 5px solid transparent;
+  border-top-color: white;
+  border-radius: 50%;
+  -webkit-animation: button__loading-spinner 1s ease infinite;
+          animation: button__loading-spinner 1s ease infinite;
+}
+
+@-webkit-keyframes button__loading-spinner {
+  from {
+    -webkit-transform: rotate(0turn);
+            transform: rotate(0turn);
+  }
+  to {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+}
+
+@keyframes button__loading-spinner {
+  from {
+    -webkit-transform: rotate(0turn);
+            transform: rotate(0turn);
+  }
+  to {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
 }
 
 .form {
   position: relative;
   padding: 1rem;
-  width: 450px;
+  width: 90%;
 }
 
 .form .btn {
