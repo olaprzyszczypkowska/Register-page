@@ -65,6 +65,15 @@ loadingBtn.addEventListener("click", function () {
       btnText.textContent = "Success";
     }, 2000);
     warning.textContent = "";
+  } else if (!inputEmail.value.match(/[@][a-z]+\.[a-z]/i)) {
+    warning.textContent = "Check your e-mail";
+  } else if (
+    !inputPassword.value.length > minValue ||
+    !inputPassword.value.match(letters) ||
+    !inputPassword.value.match(numbers) ||
+    !inputPassword.value.match(special)
+  ) {
+    warning.textContent = "Check your password";
   } else {
     warning.textContent = "Fill the form";
   }
